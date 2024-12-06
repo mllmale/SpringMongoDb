@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Cadastro de Livro</title>
+    <link href="Css/Styles.css" rel="stylesheet">
+    <link href="Css/Cadastros.css" rel="stylesheet">
+    <link href="Css/Consultas.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Imagens/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Biblioteca</h1>
+        <p>Banco de dados e Desenvolvimento Web</p>
+    </header>
+    <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="cadastro_funcionario.html">Cadastro Funcionário</a>
+        <a href="cadastro_livro.html">Cadastro Livros</a>
+        <a href="emprestimo.html">Realizar Empréstimos</a>
+        <a href="consulta_funcionarios.html">Funcionário</a>
+        <a href="consulta_livro.html">Livros</a>
+        <a href="relatorio_emprestimo.html">Relatório Empréstimos</a>
+    </nav>
+
+    <main>
+        <div class="funcao" id="cadastro">
+            <div>
+                <h2>Cadastros</h2>
+                <div class="janela_cadastro">
+                    <h3>Cadastro de Livro</h3>
+                    <input type="text" id="titulo" placeholder="Título" maxlength="100">
+                    <input type="text" id="autor" placeholder="Autor" maxlength="100">
+                    <input type="text" id="nacionalidade" placeholder="Nacionalidade" maxlength="100">
+                    <input type="number" id="ano" placeholder="Ano de Publicação" maxlength="4">
+                    <input type="text" id="codigo" placeholder="Código" maxlength="3" oninput="permitirApenasNumeros(this)">
+
+
+                    <button type="submit" class="enviar" onclick="cadastrarLivro()">Enviar</button>
+                </div>
+            </div>   
+        </div>
+    </main>
+
+    <footer>
+        <p>Site Desenvolvido como <strong>Projeto Avaliativo</strong> para Disciplinas de <strong>Banco de Dados</strong> e <strong>Desenvolvimento Web</strong> - FAINOR 2024</p>
+    </footer>
+    
+    <script src="Js/Cadastro_livro.js"></script>
+</body>
+</html>

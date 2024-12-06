@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Banco de dados e Desenvolvimento Web</title>
+    <link href="Css/Styles.css" rel="stylesheet">
+    <link href="Css/Cadastros.css" rel="stylesheet">
+    <link href="Css/Consultas.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/editar.css">
+    <link rel="shortcut icon" href="Imagens/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca</h1>
+        <p>Banco de dados e Desenvolvimento Web</p>
+    </header>
+    <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="cadastro_autor.html">Cadastro Autor</a>
+        <a href="cadastro_funcionario.html">Cadastro Funcionário</a>
+        <a href="cadastro_leitor.html">Cadastro Leitor</a>
+        <a href="cadastro_livro.html">Cadastro Livros</a>
+        <a href="emprestimo.html">Realizar Emprestimos</a>
+        <a href="consulta_autor.html">Autores</a>
+        <a href="consulta_funcionarios.html">Funcionários</a>
+       
+        <a href="consulta_livro.html">Livros</a>
+        <a href="relatorio_emprestimo.html">Relatório Empréstimos</a>
+        <a href="excluir.html">Excluir</a>
+    </nav>
+    <main>
+        <div class="funcao">
+            <h2>Editar Dados</h2>
+            
+            <!-- Editar Autor -->
+            <div class="janela_editar">
+                <h3>Editar Autor</h3>
+                <div class="janela_editar_interna">
+                    <select id="selectAutor" style="height: 40px; width: 200px; margin-top: 8px;">
+                        <option value="" disabled selected>Selecione o Autor</option>
+                    </select>
+                    <div class="inputEditar">
+                        <input id="inputAutorNome" type="text" placeholder="Nome do Autor">
+                        <input id="inputAutorNacionalidade" type="text" placeholder="Nacionalidade">
+                    </div>
+                    <button type="button" class="butaoEditar" onclick="editarItem('autores')">Editar</button>
+                </div>
+            </div>
+
+            <!-- Editar Funcionário -->
+            <div class="janela_editar">
+                <h3>Editar Funcionário</h3>
+                <div class="janela_editar_interna">
+                    <select id="selectFuncionario" style="height: 40px; width: 200px; margin-top: 8px;">
+                        <option value="" disabled selected>Selecione o Funcionário</option>
+                    </select>
+                    <div class="inputEditar">
+                        <input id="inputFuncionarioNome" type="text" placeholder="Nome">
+                        <input id="inputFuncionarioCargo" type="text" placeholder="Cargo">
+                    </div>
+                    <button type="button" class="butaoEditar" onclick="editarItem('funcionarios')">Editar</button>
+                </div>
+            </div>
+
+            <!-- Editar Livro -->
+            <div class="janela_editar">
+                <h3>Editar Livro</h3>
+                <div class="janela_editar_interna">
+                    <select id="selectLivro" style="height: 40px; width: 200px; margin-top: 8px;">
+                        <option value="" disabled selected>Selecione o Livro</option>
+                    </select>
+                    <div class="inputEditar">
+                        <input id="inputLivroTitulo" type="text" placeholder="Título">
+                        <input id="inputLivroAutor" type="text" placeholder="Autor">
+                        <input id="inputLivroGenero" type="text" placeholder="Gênero">
+                    </div>
+                    <button type="button" class="butaoEditar" onclick="editarItem('livros')">Editar</button>
+                </div>
+            </div>
+
+            <!-- Editar Empréstimo -->
+            <div class="janela_editar">
+                <h3>Editar Empréstimo</h3>
+                <div class="janela_editar_interna">
+                    <select id="selectEmprestimo" style="height: 40px; width: 200px; margin-top: 8px;">
+                        <option value="" disabled selected>Selecione o Empréstimo</option>
+                    </select>
+                    <div class="inputEditar">
+                        <input id="inputEmprestimoLeitor" type="text" placeholder="Leitor">
+                        <input id="inputEmprestimoLivro" type="text" placeholder="Livro">
+                        <input id="inputEmprestimoData" type="date" placeholder="Data do Empréstimo">
+                    </div>
+                    <button type="button" class="butaoEditar" onclick="editarItem('emprestimos')">Editar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Site Desenvolvido como <strong>Projeto Avaliativo</strong> para Disciplinas de <strong>Banco de Dados</strong> e <strong>Desenvolvimento Web</strong> - FAINOR 2024</p>
+    </footer>
+    <script src="Js/Permitir_numeros.js"></script>
+    <script src="Js/Editar.js"></script>
+</body>
+</html>

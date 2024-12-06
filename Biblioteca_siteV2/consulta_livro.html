@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Banco de dados e Desenvolvimento Web</title>
+    <link href="Css/Styles.css" rel="stylesheet">
+    <link href="Css/Cadastros.css" rel="stylesheet">
+    <link href="Css/Consultas.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Imagens/icon.png" type="image/x-icon">
+</head>
+<body>
+    
+    
+    <header>
+        <h1>Biblioteca</h1>
+         <p>Banco de dados e Desenvolvimento Web</p>
+         
+     </header>
+    
+     <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="cadastro_autor.html">Cadastro Autor</a>
+        <a href="cadastro_funcionario.html">Cadastro Funcionário</a>
+        <a href="cadastro_leitor.html">Cadastro Leitor</a>
+        <a href="cadastro_livro.html">Cadastro Livros</a>
+        <a href="emprestimo.html">Realizar Emprestimos</a>
+        <a href="consulta_autor.html">Autores</a>
+        <a href="consulta_funcionarios.html">Funcionários</a>
+     
+        <a href="consulta_livro.html">Livros</a>
+        <a href="relatorio_emprestimo.html">Relatório Empréstimos</a>
+        <a href="excluir.html">Excluir</a>
+    </nav>
+     
+    <img src="Imagens/consultaerase.png" alt="teste" class="diminuiiii" style="position: absolute; margin-top: -150px;">
+  
+    <main>
+        <div class="funcao" id="consultar" style="height: 630px; ">
+            <h2>Consultar Livro</h2>
+            <p style="margin: 10px; text-align: center; font-weight: bold;;">Caso nenhum filtro seja selecionado, todos os livros serão exibidos.</p>
+        
+            <form id="formConsultaLivro">
+
+            <!--Filtros de pesquisa-->
+            <div class="checkboxes" style="width: 550px;">
+                <div class="titulo_checkboxes"><strong>Filtro de pesquisa</strong></div>
+                <strong>
+                    <label for="consulta/livro/selecionar_titulo">
+                        <input id="consulta/livro/selecionar_titulo" type="checkbox"> Titulo
+                    </label>
+                    <label for="consulta/livro/selecionar_autor">
+                        <input id="consulta/livro/selecionar_autor" type="checkbox"> Autor
+                    </label>
+                    <label for="consulta/livro/selecionar_ano">
+                        <input id="consulta/livro/selecionar_ano" type="checkbox"> Ano
+                    </label>
+                    <label for="consulta/livro/selecionar_id">
+                        <input id="consulta/livro/selecionar_id" type="checkbox"> Codigo
+                    </label>
+                    <label for="consulta/livro/selecionar_disponivel">
+                        <input id="consulta/livro/selecionar_disponivel" type="checkbox"> Disponibilidade
+                        
+                    </label>
+                </strong>
+            </div>
+
+            <!--Filtros de visibilidade-->
+            <div class="checkboxes" style="width: 550px;">
+                <div class="titulo_checkboxes"><strong>Filtro de visibilidade</strong></div>
+                <strong>
+                  
+                    <label for="consulta/livro/visibilidade_titulo">
+                        <input id="consulta/livro/visibilidade_titulo" type="checkbox" checked> Titulo
+                    </label>
+                    <label for="consulta/livro/visibilidade_autor">
+                        <input id="consulta/livro/visibilidade_autor" type="checkbox" checked> Autor
+                    </label>
+                    </label>
+                    <label for="consulta/livro/visibilidade_ano">
+                        <input id="consulta/livro/visibilidade_ano" type="checkbox" checked> Ano
+                    </label>
+                    <label for="consulta/livro/visibilidade_id">
+                        <input id="consulta/livro/visibilidade_id" type="checkbox" checked> Codigo
+                    </label>
+                    <label for="consulta/livro/visibilidade_disponivel">
+                        <input id="consulta/livro/visibilidade_disponivel" type="checkbox" checked> Disponível
+                    </label>
+                   
+                </strong>
+            </div>
+
+           <!--Campos de Pesquisa-->
+            <div class="escrever_consulta" style="margin-left: 50px">
+                     <div id="campo_livro_titulo" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_livro_titulo" placeholder="Pesquisar por Titulo">
+                      </div>
+                      <div id="campo_livro_autor" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_livro_autor" placeholder="Pesquisar por Autor">
+                      </div>
+                      <div id="campo_livro_ano" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_livro_ano" placeholder="Pesquisar por Ano">
+                      </div>
+                      <div id="campo_livro_id" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_livro_id" placeholder="Pesquisar por id">
+                      </div>
+                      <div id="campo_livro_disponivel" class="campo_pesquisa" style="display: none;">
+                        <select id="pesquisa_livro_disponivel">
+                            <option>Disponíveis</option>
+                            <option>Indisponíveis</option>
+                            <option>Novos</option>
+                        </select>
+                        </div>
+            </div>
+
+                     <div class="testizindoscria" style="display: block;">
+                <button class="consulta">Consultar</button>
+                     </div>
+
+                    </form>
+            
+           
+           
+            <br>
+
+           <table id="resultadoConsultaLivro" style="width: 550px;">
+                <thead>
+                    <!-- Cabeçalho da tabela com títulos visíveis -->
+                    <tr id="headerRowLivro"></tr>
+                </thead>
+                <tbody>
+                    <!-- Resultados da consulta aparecerão aqui -->
+                </tbody>
+            </table>
+            
+        </div>
+        
+    </main>
+    <footer>
+        <p>Site Desenvolvido como <strong>Projeto Avaliativo</strong> para Disciplinas de <strong>Banco de Dados</strong> e <strong>Desenvolvimento Web</strong> - FAINOR 2024</p>
+    </footer>
+    
+    <script src="Js/Consulta_livro.js"></script>
+</body>
+</html>

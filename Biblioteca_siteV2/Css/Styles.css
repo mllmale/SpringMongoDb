@@ -1,0 +1,236 @@
+@charset "UTF-8";
+  
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+header{
+    background-image: linear-gradient(to bottom, #792205, #5e1b04 90%);
+    height: 130px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.226);
+
+}
+
+header > h1 {
+    text-align: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.404);
+
+    font-size: 2.7em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+
+    padding-top: 20px;
+}
+
+header > p {
+    text-align: center;
+    font-size: 1em;
+
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.404);
+
+    
+}
+
+main{
+    
+    padding-bottom: 50px;
+
+    width: 200vh;
+    margin: auto;
+    height: 100vh;
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: rgb(199, 119, 28);
+  
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.226);
+    
+}
+
+nav {
+    background-color: #5e1b04;
+    height: 30px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 4px;
+    background-color: rgb(150, 90, 22);
+    padding: 4px;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    padding: 6px;
+    color: black;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+
+body{  
+    background-color: white;
+}
+
+main > h1 {
+
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.404);
+    
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: normal;
+    width: 1000px;
+}
+
+.funcao{
+    margin: auto;
+    margin-top: 2%;
+    
+    Font-family: Helvetica Neue, Helvetica, Arial, sans-serif; 
+
+    background-color: #F7C56F;
+
+    height: 430px;
+    width: 1000px;
+
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+}
+
+
+
+.funcao h2 {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.267);
+    
+    margin-bottom: 5px;
+       /* Vou mudando a cor só p testarviu*/ 
+    background-color: rgb(120, 57, 35);
+    color: #ffffff;
+    text-align: center;
+
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+
+
+.funcao h3 {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.185);
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: -10px;
+
+    background-color: rgb(120, 57, 35);
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+footer{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: black;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.enviar {
+
+    background-color: white;
+
+    cursor: pointer;
+    border-radius: 3px;
+
+    text-decoration: none;
+    
+    padding: 10px 15px;
+    display: inline-block;  
+
+    border: 1px solid black;
+}
+
+.enviar:hover {
+    background-color: rgb(99, 221, 99);
+    transition-duration: 0.5s;
+}
+
+.enviar::after {
+    background-color: aqua;
+}
+
+
+article {
+    height: 60vh;
+    width: 600px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+}
+
+article h1 {
+    font-weight: normal;
+    text-align: center;
+}
+
+article h2 {
+    font-weight: normal;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+article p {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 1.5em;
+    
+}
+
+article img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+.diminuiiii {
+    width: 100px;
+    height: 100px;
+}
+
+
+.janela_cadastro{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+    background-color: white;
+    border-radius: 5px;
+    height: 350px;
+    width: 800px;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+
+
+
+

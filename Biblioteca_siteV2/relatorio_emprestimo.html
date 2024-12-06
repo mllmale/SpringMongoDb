@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Banco de dados e Desenvolvimento Web</title>
+    <link href="Css/Styles.css" rel="stylesheet">
+    <link href="Css/Cadastros.css" rel="stylesheet">
+    <link href="Css/Consultas.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Imagens/icon.png" type="image/x-icon">
+</head>
+<body>
+   
+    <header>
+        <h1>Biblioteca</h1>
+         <p>Banco de dados e Desenvolvimento Web</p>
+     </header>
+     <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="cadastro_autor.html">Cadastro Autor</a>
+        <a href="cadastro_funcionario.html">Cadastro Funcionário</a>
+        <a href="cadastro_leitor.html">Cadastro Leitor</a>
+        <a href="cadastro_livro.html">Cadastro Livros</a>
+        <a href="emprestimo.html">Realizar Emprestimos</a>
+        <a href="consulta_autor.html">Autores</a>
+        <a href="consulta_funcionarios.html">Funcionários</a>
+        
+        <a href="consulta_livro.html">Livros</a>
+        <a href="relatorio_emprestimo.html">Relatório Empréstimos</a>
+        <a href="excluir.html">Excluir</a>
+    </nav>
+    <img src="Imagens/consultaerase.png" alt="teste" class="diminuiiii" style="position: absolute; margin-top: -150px;">
+ 
+    <main>
+        <div class="funcao" id="consultar_emprestimo" style="height: 630px; width: 1200px;">
+            <h2>Consultar Empréstimos</h2>
+            <p style="margin: 10px; text-align: center; font-weight: bold;;">Caso nenhum filtro seja selecionado, todos os livros serão exibidos.</p>
+            
+            <form id="formConsultaEmprestimo">
+            <!--Filtro de Pesquisa-->
+                <div class="checkboxes" style="width: 950px;">
+                    <div class="titulo_checkboxes"><strong>Filtro de pesquisa</strong></div>
+                    <strong>
+                        <label for="consulta/emprestimo/selecionar_leitor">
+                            <input id="consulta/emprestimo/selecionar_leitor" type="checkbox"> Leitor
+                        </label>
+                        <label for="consulta/emprestimo/selecionar_funcionario_responsavel">
+                            <input id="consulta/emprestimo/selecionar_funcionario_responsavel" type="checkbox"> Funcionário resp.
+                        </label>
+                        <label for="consulta/emprestimo/selecionar_livro">
+                            <input id="consulta/emprestimo/selecionar_livro" type="checkbox"> Livro
+                        </label>
+                        <label for="consulta/emprestimo/selecionar_data">
+                            <input id="consulta/emprestimo/selecionar_data" type="checkbox"> Data
+                        </label>
+                        <label for="consulta/emprestimo/selecionar_id">
+                            <input id="consulta/emprestimo/selecionar_id" type="checkbox"> ID
+                        </label>
+                    </strong>
+                </div>
+    
+                <!--Filtro de Visibilidade-->
+                <div class="checkboxes" style="width: 950px;">
+                    
+                    <div class="titulo_checkboxes"><strong>Filtro de visibilidade</strong></div>
+                    <strong>
+                        <label for="consulta/emprestimo/visibilidade_leitor">
+                            <input id="consulta/emprestimo/visibilidade_leitor" type="checkbox" checked> Leitor
+                        </label>
+                        <label for="consulta/emprestimo/visibilidade_funcionario_responsavel">
+                            <input id="consulta/emprestimo/visibilidade_funcionario_responsavel" type="checkbox" checked> Funcionário resp.
+                        </label>
+                        <label for="consulta/emprestimo/visibilidade_livro">
+                            <input id="consulta/emprestimo/visibilidade_livro" type="checkbox" checked> Livro
+                        </label>
+                        <label for="consulta/emprestimo/visibilidade_data">
+                            <input id="consulta/emprestimo/visibilidade_data" type="checkbox" checked> Data do empréstimo
+                        </label>
+                        
+                        <label for="consulta/emprestimo/visibilidade_id">
+                            <input id="consulta/emprestimo/visibilidade_id" type="checkbox" checked> Código
+                        </label>
+    
+                    </strong>
+                </div>
+               
+    <!--Campos de Pesquisa-->
+                <div class="escrever_consulta" style="margin-left: 10px">
+                    <div id="campo_emprestimo_leitor" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_emprestimo_leitor" placeholder="Pesquisar por Leitor" style="width: 180px;">
+                        <input type="number" placeholder="Qtd. Empréstimos mínimos" style="margin-top: 2px; width: 180px;">
+                     </div>
+                    <div id="campo_emprestimo_livro" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_emprestimo_livro" placeholder="Pesquisar por Livro">
+                        <input type="checkbox"><strong>Histórico</strong>
+                    </div>
+                        
+                         <div id="campo_emprestimo_funcionario_responsavel" class="campo_pesquisa" style="display: none;">
+                    <input type="text" id="pesquisa_emprestimo_funcionario_responsavel" placeholder="Pesquisar por Funcionario Responsavel">
+                         </div>
+                        
+                         <div id="campo_emprestimo_data_inicial" class="campo_pesquisa" style="display: none;">
+                            <label for="pesquisa_emprestimo_data_inicial" style="font-weight: bold;">Início:</label>
+                    <input type="date" id="pesquisa_emprestimo_data_inicial" placeholder="Pesquisar por Data Inicial">
+                         </div>
+                        
+                         <div id="campo_emprestimo_data_final" class="campo_pesquisa" style="display: none;">
+                            <label for="pesquisa_emprestimo_data_inicial" style="font-weight: bold;">Fim:</label>
+                    <input type="date" id="pesquisa_emprestimo_data_final" placeholder="Pesquisar por Data Final">
+                         </div>
+                         
+                         <div id="campo_emprestimo_id" class="campo_pesquisa" style="display: none;">
+                    <input type="text" id="pesquisa_emprestimo_id" placeholder="Pesquisar por Código">
+                         </div>
+                        
+                         <div class="testizindoscria" style="display: block; margin-left: 850px;">
+                            <button type="submit" class="consulta">Consultar</button>
+                        </div>
+                         
+            </div>
+        </form>
+        
+           <!-- Tabela de Resultados -->
+           <table id="resultadoConsultaEmprestimo" style="margin-left: 200px;">
+            <thead>
+                <!-- Cabeçalho da tabela com títulos visíveis -->
+                <tr id="headerRowEmprestimo"></tr>
+            </thead>
+            <tbody>
+                <!-- Resultados da consulta aparecerão aqui -->
+            </tbody>
+        </table>
+            
+        </div>
+        
+    </main>
+    <footer>
+        <p>Site Desenvolvido como <strong>Projeto Avaliativo</strong> para Disciplinas de <strong>Banco de Dados</strong> e <strong>Desenvolvimento Web</strong> - FAINOR 2024</p>
+    </footer>
+    
+    <script src="Js/Consulta_emprestimo.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Banco de dados e Desenvolvimento Web</title>
+    <link href="Css/Styles.css" rel="stylesheet">
+    <link href="Css/Cadastros.css" rel="stylesheet">
+    <link href="Css/Consultas.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Imagens/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    
+
+    
+    <header>
+        <h1>Biblioteca</h1>
+         <p>Banco de dados e Desenvolvimento Web</p>
+     </header>
+     <nav>
+         <a href="index.html">Página Inicial</a>
+         <a href="cadastro_funcionario.html">Cadastro Funcionário</a>
+         <a href="cadastro_livro.html">Cadastro Livros</a>
+         <a href="emprestimo.html">Realizar Emprestimos</a>
+         <a href="consulta_funcionarios.html">Funcionário</a>
+         <a href="consulta_livro.html">Livros</a>
+         <a href="relatorio_emprestimo.html">Relatório Empréstimos</a>
+     </nav>
+    <img src="Imagens/consultaerase.png" alt="teste" class="diminuiiii" style="position: absolute; margin-top: -150px;">
+  
+
+
+    <main>
+
+        <div class="funcao" id="consultar" style="height: 630px; ">
+            <h2>Consultar Livro</h2>
+        
+            <div class="checkboxes" style="width: 550px;">
+                <div class="titulo_checkboxes"><strong>Filtro de pesquisa</strong></div>
+                <strong>
+                    <label for="consulta/livro/selecionar_titulo">
+                        <input id="consulta/livro/selecionar_titulo" type="checkbox"> Título
+                    </label>
+
+                    <label for="consulta/livro/selecionar_autor">
+                        <input id="consulta/livro/selecionar_autor" type="checkbox"> Autor
+                    </label>
+
+                    <label for="consulta/livro/selecionar_nacionalidade">
+                        <input id="consulta/livro/selecionar_nacionalidade" type="checkbox"> Nacionalidade
+                    </label>
+
+                    <label for="consulta/livro/selecionar_ano">
+                        <input id="consulta/livro/selecionar_ano" type="checkbox"> Ano
+                    </label>
+                    <label for="consulta/livro/selecionar_codigo">
+                        <input id="consulta/livro/selecionar_codigo" type="checkbox"> Código
+                    </label>
+                </strong>
+            </div>
+
+
+            <div class="checkboxes" style="width: 550px;">
+
+
+                <div class="titulo_checkboxes"><strong>Filtro de visibilidade</strong></div>
+                <strong>
+                    <label for="consulta/livro/visibilidade_titulo">
+                        <input id="consulta/livro/visibilidade_titulo" type="checkbox"> Título
+                    </label>
+
+                    <label for="consulta/livro/visibilidade_autor">
+                        <input id="consulta/livro/visibilidade_autor" type="checkbox"> Autor
+                    </label>
+
+                    <label for="consulta/livro/visibilidade_nacionalidade">
+                        <input id="consulta/livro/visibilidade_nacionalidade" type="checkbox"> Nacionalidade
+                    </label>
+
+                    <label for="consulta/livro/visibilidade_ano">
+                        <input id="consulta/livro/visibilidade_ano" type="checkbox"> Ano
+                    </label>
+
+                    <label for="consulta/livro/visibilidade_codigo">
+                        <input id="consulta/livro/visibilidade_codigo" type="checkbox"> Código
+                    </label>
+                   
+
+
+                </strong>
+            </div>
+           
+
+            <div class="escrever_consulta" style="margin-left: 50px">
+
+                  <div id="campo_livro_titulo" class="campo_pesquisa" style="display: none;">
+                <input type="text" id="pesquisa_livro_titulo" placeholder="Pesquisar por Titulo">
+                     </div>
+
+                     <div id="campo_livro_autor" class="campo_pesquisa" style="display: none;">
+                            <input type="text" id="pesquisa_livro_autor" placeholder="Pesquisar por autor">
+                       </div>
+    
+                       <div id="campo_livro_nacionalidade" class="campo_pesquisa" style="display: none;">
+                         <input type="text" id="pesquisa_livro_nacionalidade" placeholder="Pesquisar por Nacionalidade">
+                  </div>
+            
+                        <div id="campo_livro_ano" class="campo_pesquisa" style="display: none;">
+                       <input type="text" id="pesquisa_livro_ano" placeholder="Pesquisar por Ano">
+                     </div>
+
+                     <div id="campo_livro_codigo" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_livro_codigo" placeholder="Pesquisar por Código">
+                      </div>
+
+                     <div class="testizindoscria" style="display: block;">
+                <button class="consulta">Consultar</button>
+                     </div>
+            </div>
+           
+           
+
+            <br>
+
+            <table>
+                <tr> 
+                    <th>Título  </th>
+                    <th>Autor </th>
+                    <th>Editora </th>
+                    <th>Gênero </th>
+                    <th>Ano  </th>
+
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+                <tr>
+                    <td>Senhor dos Anéis</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Los Hermanos</td>
+                    <td>Créu</td>
+                    <td>200 a.C.</td>
+                </tr>
+
+                
+            </table>
+
+            
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>Site Desenvolvido como <strong>Projeto Avaliativo</strong> para Disciplinas de <strong>Banco de Dados</strong> e <strong>Desenvolvimento Web</strong> - FAINOR 2024</p>
+    </footer>
+    
+    <script src="Js/Consulta_livro.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.checkboxes{
+    background: linear-gradient(0deg, rgb(192, 4, 4), rgb(255, 166, 0)) ;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 5px  #5e1b04;
+    color: white;
+    height: 45px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.checkboxes input[type="checkbox"]{
+    scale: 1.5;
+    margin-top: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.checkboxes input[type="checkbox"]:checked{
+scale: 1.5;
+background-color: yellow;
+}
+
+
+.checkboxes label:hover{
+    text-shadow: 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white;
+    scale: 2;
+    font-weight: bold;
+  }
+
+.checkboxes .titulo_checkboxes{
+    background: linear-gradient( brown, rgb(148, 13, 13));
+font-weight: bold;    
+
+}
+
+
+.checkboxes label{
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+.janela_consulta{
+    background-color: white;
+    margin-left: 7%;
+    margin-top: 2%;
+    margin-right: 7%;
+    position: absolute;
+}
+
+/*Pra mudar as tabelas*/
+.funcao table{
+    display: block;
+    
+    border-collapse: collapse;       
+    background-color: white;
+    
+    margin-left: 7%;
+    
+    width: 850px;
+    height: 250px;
+
+    overflow-y: auto;   
+}
+
+.funcao th{
+    width: 190px;
+    height: 30px;
+    border: 3px;
+    border-color: black;
+    border-style:solid;
+    font-size: 25px;
+}
+
+.funcao td{
+    text-align: center;
+    height: 30px;
+    border: 3px;
+    border-color: black;
+    border-style:solid;
+    font-size: 20px;
+}
+
+.qtd_livro_autor{
+    display: block;
+    margin: 3px;
+    margin-left: 150px;
+}
+.consulta {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    background-color: white;
+
+    cursor: pointer;
+    border-radius: 3px;
+
+    text-decoration: none;
+    
+    padding: 10px 15px;
+
+    border: 1px solid black;
+}
+
+.consulta:hover {
+    background-color: rgb(99, 221, 99);
+    transition-duration: 0.5s;
+}
+
+
+#table_funcionario {
+    width: 790px;
+    margin-top: 100px;
+    margin-left: 10%;
+}
+
+
+.testizindoscria{
+    justify-content: center;
+    display: inline;
+    flex-wrap: wrap;
+margin-left: 70%;
+margin-top: 10px;
+    width: 400px;
+    height: 40px;
+}
+
+.testizindoscria input {
+    height: 30px;
+    width: 175px;
+    margin-top: 3px;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+.testizindoscria button {
+    justify-content: center;
+    margin-top: 1px;
+    margin-left: 100px;
+    align-items: center;
+    
+}
+
+#consultar table {
+    margin: auto;
+}
+

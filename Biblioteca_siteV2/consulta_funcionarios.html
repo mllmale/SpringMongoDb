@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Banco de dados e Desenvolvimento Web</title>
+    <link href="Css/Styles.css" rel="stylesheet">
+    <link href="Css/Cadastros.css" rel="stylesheet">
+    <link href="Css/Consultas.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Imagens/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca</h1>
+        <p>Banco de dados e Desenvolvimento Web</p>
+    </header>
+    <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="cadastro_autor.html">Cadastro Autor</a>
+        <a href="cadastro_funcionario.html">Cadastro Funcionário</a>
+        <a href="cadastro_leitor.html">Cadastro Leitor</a>
+        <a href="cadastro_livro.html">Cadastro Livros</a>
+        <a href="emprestimo.html">Realizar Emprestimos</a>
+        <a href="consulta_autor.html">Autores</a>
+        <a href="consulta_funcionarios.html">Funcionários</a>
+        
+        <a href="consulta_livro.html">Livros</a>
+        <a href="relatorio_emprestimo.html">Relatório Empréstimos</a>
+        <a href="excluir.html">Excluir</a>
+    </nav>
+    <main>
+        <div class="funcao" id="consultar" style="height: 630px;">
+            <h2>Consultar Funcionário</h2>
+            <p style="margin: 10px; text-align: center; font-weight: bold;">
+                Caso nenhum filtro seja selecionado, todos os funcionários serão exibidos.
+            </p>
+
+
+            <form id="formConsultaFuncionario">
+
+
+                <!-- Filtros de Pesquisa -->
+                <div class="checkboxes" style="width: 500px;">
+                    <div class="titulo_checkboxes"><strong>Filtro de pesquisa</strong></div>
+                    <strong>
+                        <label for="consulta/funcionario/selecionar_nome">
+                            <input id="consulta/funcionario/selecionar_nome" type="checkbox"> Nome
+                        </label>
+                        <label for="consulta/funcionario/selecionar_cargo">
+                            <input id="consulta/funcionario/selecionar_cargo" type="checkbox"> Cargo
+                        </label>
+                        <label for="consulta/funcionario/selecionar_id">
+                            <input id="consulta/funcionario/selecionar_id" type="checkbox"> ID
+                        </label>
+                    </strong>
+                </div>
+
+                
+                <!-- Filtros de Visibilidade -->
+                <div class="checkboxes">
+                    <div class="titulo_checkboxes"><strong>Filtro de visibilidade</strong></div>
+                    <strong>
+                        <label for="consulta/funcionario/visibilidade_nome">
+                            <input id="consulta/funcionario/visibilidade_nome" type="checkbox" checked> Nome
+                        </label>
+                        <label for="consulta/funcionario/visibilidade_cargo">
+                            <input id="consulta/funcionario/visibilidade_cargo" type="checkbox" checked> Cargo
+                        </label>
+                        <label for="consulta/funcionario/visibilidade_id">
+                            <input id="consulta/funcionario/visibilidade_id" type="checkbox" checked> ID
+                        </label>
+                    </strong>
+                </div>
+
+                <!-- Campos de Pesquisa -->
+                <div class="escrever_consulta" style="margin-left: 260px; margin-right:200px">
+                    <div id="campo_funcionario_nome" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_funcionario_nome" placeholder="Pesquisar por Nome">
+                    </div>
+                    <div id="campo_funcionario_cargo" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_funcionario_cargo" placeholder="Pesquisar por Cargo">
+                    </div>
+                    <div id="campo_funcionario_id" class="campo_pesquisa" style="display: none;">
+                        <input type="text" id="pesquisa_funcionario_id" placeholder="Pesquisar por ID">
+                    </div>
+                </div>
+
+
+                <!-- Botão de Consulta -->
+                <div class="testizindoscria" style="display: block; margin-left: 730px;">
+                    <button type="submit" class="consulta">Consultar</button>
+                </div>
+            </form>
+
+            
+            <!-- Tabela de Resultados -->
+            <table id="resultadoConsultaFuncionario" style="width: 550px;">
+                <thead>
+                    <!-- Cabeçalho da tabela com títulos visíveis -->
+                    <tr id="headerRowFuncionario"></tr>
+                </thead>
+                <tbody>
+                    <!-- Resultados da consulta aparecerão aqui -->
+                </tbody>
+            </table>
+            
+        </div>
+    </main>
+    <footer>
+        <p>Site Desenvolvido como <strong>Projeto Avaliativo</strong> para Disciplinas de <strong>Banco de Dados</strong> e <strong>Desenvolvimento Web</strong> - FAINOR 2024</p>
+    </footer>
+    <script src="Js/Consulta_funcionario.js"></script>
+</body>
+</html>
